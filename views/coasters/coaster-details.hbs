@@ -1,0 +1,21 @@
+<div class="container coasters-index">
+
+  <h1 style="font-weight: 100">{{name}}</h1>
+
+  <h4>Descripción</h4>
+  <p>{{description}}</p>
+  <p><strong>Longitud: </strong> {{length}}m | <strong>Inversiones: </strong> {{inversions}}</p>
+
+  <hr>
+
+  <h5>Sobre el parque</h5>
+  {{#each park}}
+  <p><strong>Nombre</strong>: {{this.name}}</p>
+  <p><strong>Descripción</strong>: {{this.description}}</p>
+  {{/each}}
+  <form action="/coasters/{{_id}}/borrar" method="post">
+    <button type="submit" class="btn btn-dark">Borrar</button>
+  </form>
+  <a href="/coasters/listaCoaster" class="btn btn-dark">Volver</a>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="container parks-index">
+
+    <h1 style="font-weight: 100">{{name}}</h1>
+
+    <h4>Descripción</h4>
+    <p>{{description}}</p>
+    <p>isTrue? {{active}}</p>
+
+    <hr>
+
+    <form action="/parks/{{name}}/borrar" method="post">
+        <button type="submit" class="btn btn-dark">Borrar</button>
+    </form>
+    <a href="/parks/listaParques" class="btn btn-dark">Volver</a>
+
+</div>
